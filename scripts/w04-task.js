@@ -53,10 +53,11 @@ myProfile.hobbies.forEach((hobby) => {
 
 /* Places Lived DataList */
 
-myProfile.placesLived.forEach((place, length) => {
+myProfile.placesLived.forEach((place) => {
   let dt = document.createElement("dt");
-  dt.textContent = place;
+  dt.textContent = place.place;
   let dd = document.createElement("dd");
-  dd.textContent = length;
-  document.querySelector("#places-lived").appendChild(dt, dd);
+  dd.textContent = place.length;
+  document.querySelector("#places-lived").appendChild(dt);
+  document.querySelector("#places-lived").appendChild(dd);
 });
